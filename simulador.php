@@ -55,7 +55,6 @@ if (!isset($_SESSION['mail'])) {
       <div class="welcome">
         <p>
           Bienvenido (Nombre) !
-          <?php echo $_SESSION['user']; ?>
         </p>
       </div>
 

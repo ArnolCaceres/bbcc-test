@@ -2,12 +2,12 @@
 
 include 'conexion_be.php';
 
-$username = $_POST['user'];
+$user = $_POST['user'];
 $mail = $_POST['mail'];
 $password = $_POST['password'];
 
 // Conectando, seleccionando la base de datos
-$query = "INSERT INTO usuarios(user, mail, password) VALUES ('$username','$mail','$password')";
+$query = "INSERT INTO usuarios(user, mail, password) VALUES ('$user','$mail','$password')";
 
 //Verificar que el correo no se repita
 $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE mail = '$mail' ");
@@ -22,7 +22,7 @@ if (mysqli_num_rows($verificar_correo) > 0) {
 }
 
 //Verifgicar que el nombre de usuario no se repita
-$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE user = '$username' ");
+$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE user = '$user' ");
 
 if (mysqli_num_rows($verificar_usuario) > 0) {
     echo '
@@ -37,7 +37,7 @@ if (mysqli_num_rows($verificar_usuario) > 0) {
 $ejecutar = mysqli_query($conexion, $query);
 
 if ($ejecutar) {
-    $_SESSION['user'] = $username;
+    $_SESSION['user'] = $user;
     echo
         '
        <script>

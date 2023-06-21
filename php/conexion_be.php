@@ -1,6 +1,6 @@
 <?php
 /*Localhost to 127.0.0.1:33065. Por el cambio en el puerto para XAMPP*/
-$conexion = mysqli_connect("containers-us-west-135.railway.app","root","HRdr1hw9btzCXy3LAEJy","railway");
+$conexion = mysqli_connect("sql9.freemysqlhosting.net","sql9627356","1KZ3veQiT8","sql9627356");
 
 /*Comprobar la conexión
 if($conexion){
