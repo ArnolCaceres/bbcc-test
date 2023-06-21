@@ -54,7 +54,7 @@ if (!isset($_SESSION['mail'])) {
     <main>
       <div class="welcome">
         <p>
-          Bienvenido <?php echo $_SESSION['user']; ?>
+          Bienvenido
         </p>
       </div>
 
